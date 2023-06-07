@@ -1,0 +1,7 @@
+.list li {
+  margin: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
