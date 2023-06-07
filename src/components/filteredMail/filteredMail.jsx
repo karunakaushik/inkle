@@ -10,9 +10,10 @@ const FilteredMailList = () => {
   const mails = useSelector((state) =>
     state.mails.filter((mail) => mail.tag == tag)
   );
-  useEffect(() => {
-    dispatch(fetchMails());
-  }, [dispatch]);
+
+  // useEffect(() => {
+  //   dispatch(fetchMails());
+  // }, []);
 
   return (
     <div>

@@ -5,3 +5,6 @@
   align-items: center;
   gap: 10px;
 }
+.btn {
+  width: 80px;
+}

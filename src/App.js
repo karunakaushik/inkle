@@ -5,8 +5,16 @@ import MailBody from "./components/mailBody/mailBody";
 import SearchResults from "./components/searchBox/searchBox";
 import FilteredMailList from "./components/filteredMail/filteredMail";
 import NavBar from "./components/navBar/navBar";
+import { useDispatch } from "react-redux";
+import { fetchMails } from "./Reduxstore/action/actions";
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMails());
+  }, []);
+
   return (
     <BrowserRouter>
       <div className="contain d-flex ">

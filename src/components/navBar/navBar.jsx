@@ -6,6 +6,11 @@ const NavBar = () => {
     <nav>
       <ul className="list gap">
         <li>
+          <Link to="/">
+            <button className="btn btn-primary">All</button>
+          </Link>
+        </li>
+        <li>
           <Link to="/filter/inbox">
             <button className="btn btn-primary">Inbox</button>
           </Link>
@@ -23,11 +28,6 @@ const NavBar = () => {
         <li>
           <Link to="/filter/trash">
             <button className="btn btn-primary">Trash</button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/">
-            <button className="btn btn-primary">All</button>
           </Link>
         </li>
       </ul>

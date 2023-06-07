@@ -2,8 +2,8 @@ import {
   FETCH_MAILS_REQUEST,
   FETCH_MAILS_SUCCESS,
   FETCH_MAILS_FAILURE,
+  SET_FILTER,
 } from "../action/actions";
-import { SET_FILTER } from "../action/actions";
 
 const initialState = {
   mails: [],
@@ -23,8 +23,6 @@ export const mailReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-//  default mailReducer;
 
 const initialFilter = {
   filter: "inbox",

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const MailDetails = () => {
   // Using Redux
   const { id } = useParams();
-
   const mails = useSelector((state) => state.mails);
   const mail = mails.find((mail) => mail.id == id);
+
   return (
     <div>
       {mail ? (
@@ -15,7 +15,7 @@ const MailDetails = () => {
           <p>Body : {mail.body}</p>
         </>
       ) : (
-        <p>Loading mail details...</p>
+        <p>Mail not loaded...</p>
       )}
     </div>
   );
