@@ -6,7 +6,7 @@ import MailList from "../mailList/mailList";
 const FilteredMailList = () => {
   const { tag } = useParams();
   const mails = useSelector((state) =>
-    state.mails.filter((mail) => mail.tag == tag)
+    state.mails.filter((mail) => mail.tag === tag)
   );
   return (
     <div>
