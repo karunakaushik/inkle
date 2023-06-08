@@ -5,7 +5,7 @@ const MailDetails = () => {
   // Using Redux
   const { id } = useParams();
   const mails = useSelector((state) => state.mails);
-  const mail = mails.find((mail) => mail.id == id);
+  const mail = mails.find((mail) => mail.id === parseInt(id));
 
   return (
     <div>
