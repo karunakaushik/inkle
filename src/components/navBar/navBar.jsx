@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav>
       <ul className="list gap">
         <li>
-          <Link to="/inkle">
+          <Link to="/">
             <button className="btn btn-primary">All</button>
           </Link>
         </li>
