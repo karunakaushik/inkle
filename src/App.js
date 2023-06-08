@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchMails());
-  }, []);
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
