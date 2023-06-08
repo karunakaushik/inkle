@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./mailList.css";
 const MailList = ({ mails }) => {
   return (
@@ -7,7 +6,7 @@ const MailList = ({ mails }) => {
       {mails.map((mail) => (
         <li key={mail.id}>
           <div className="boxPoint"></div> <strong>Subject: </strong> -
-          <a to={`/mails/${mail.id}`}>{mail.subject}</a>
+          <a href={`/mails/${mail.id}`}>{mail.subject}</a>
         </li>
       ))}
     </ul>
