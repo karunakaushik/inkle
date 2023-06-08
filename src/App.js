@@ -22,9 +22,9 @@ function App() {
         <NavBar />
         <Switch>
           <Route path="/filter/:tag" component={FilteredMailList} />
-          <Route path="/mails/:id" component={MailBody} />
+          <Route path="/inkle/mails/:id" component={MailBody} />
           <Route path="/search/:keyword" component={SearchResults} />
-          <Route path="/inkle" component={MailInbox} />
+          <Route exact path="/inkle" component={MailInbox} />
         </Switch>
       </div>
     </BrowserRouter>
