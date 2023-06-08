@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchMailsFailure,
-  fetchMailsSuccess,
-} from "../../Reduxstore/action/actions";
+import { useSelector } from "react-redux";
 import MailList from "../mailList/mailList";
 import SearchResults from "../searchBox/searchBox";
 
