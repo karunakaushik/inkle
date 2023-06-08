@@ -24,7 +24,7 @@ function App() {
           <Route path="/filter/:tag" component={FilteredMailList} />
           <Route path="/mails/:id" component={MailBody} />
           <Route path="/search/:keyword" component={SearchResults} />
-          <Route path="/" component={MailInbox} />
+          <Route path="/inkle" component={MailInbox} />
         </Switch>
       </div>
     </BrowserRouter>
