@@ -6,4 +6,5 @@
     Run command : npm start
 
 http://localhost:3000/ : default All mail
+
 http://localhost:3000/filter/inbox : inbox mail
