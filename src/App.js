@@ -21,9 +21,9 @@ function App() {
       <div className="contain d-flex ">
         <NavBar />
         <Switch>
-          <Route path="/filter/:tag" component={FilteredMailList} />
-          <Route path="/mails/id=={:id}" component={MailBody} />
-          <Route path="/search/:keyword" component={SearchResults} />
+          <Route path="/inkle/filter/:tag" component={FilteredMailList} />
+          <Route path="/inkle/mails/id==={:id}" component={MailBody} />
+          <Route path="/inkle/search/:keyword" component={SearchResults} />
           <Route exact path="/inkle" component={MailInbox} />
         </Switch>
       </div>

@@ -6,7 +6,7 @@ const MailList = ({ mails }) => {
       {mails.map((mail) => (
         <li key={mail.id}>
           <div className="boxPoint"></div> <strong>Subject: </strong> -
-          <a href={`/mails/id=={${mail.id}}`}>{mail.subject}</a>
+          <a href={`/inkle/mails/id==={${mail.id}}`}>{mail.subject}</a>
         </li>
       ))}
     </ul>

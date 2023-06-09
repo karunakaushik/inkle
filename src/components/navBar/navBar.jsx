@@ -11,22 +11,22 @@ const NavBar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/filter/inbox">
+          <Link to="/inkle/filter/inbox">
             <button className="btn btn-primary">Inbox</button>
           </Link>
         </li>
         <li>
-          <Link to="/filter/draft">
+          <Link to="/inkle/filter/draft">
             <button className="btn btn-primary">Draft</button>
           </Link>
         </li>
         <li>
-          <Link to="/filter/spam">
+          <Link to="/inkle/filter/spam">
             <button className="btn btn-primary">Spam</button>
           </Link>
         </li>
         <li>
-          <Link to="/filter/trash">
+          <Link to="/inkle/filter/trash">
             <button className="btn btn-primary">Trash</button>
           </Link>
         </li>
