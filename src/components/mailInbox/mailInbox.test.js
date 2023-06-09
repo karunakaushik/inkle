@@ -15,4 +15,5 @@ test("renders mail inbox", () => {
   );
 
   expect(screen.getByText("All Mails")).toBeInTheDocument();
+  expect(screen.getByText("Search :")).toBeInTheDocument();
 });

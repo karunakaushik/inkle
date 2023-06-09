@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-const MailDetails = () => {
+const MailBody = () => {
   // Using Redux
   const { id } = useParams();
   const mails = useSelector((state) => state.mails);
@@ -21,4 +21,4 @@ const MailDetails = () => {
   );
 };
 
-export default MailDetails;
+export default MailBody;

@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import MailList from "./mailList";
+import { BrowserRouter } from "react-router-dom";
 
 const mails = [
   { id: "1", sender: "John Doe", subject: "Hello", body: "Test mail" },
@@ -13,5 +14,12 @@ const mails = [
 ];
 
 test("renders mail list", () => {
-  render(<MailList mails={mails} />);
+  render(
+    <BrowserRouter>
+      <MailList mails={mails} />
+    </BrowserRouter>
+  );
+
+  expect(screen.getByText("Hello")).toBeInTheDocument();
+  expect(screen.getByText("Greetings")).toBeInTheDocument();
 });

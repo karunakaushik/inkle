@@ -8,10 +8,7 @@ const MailList = ({ mails }) => {
       {mails.map((mail) => (
         <li key={mail.id}>
           <div className="boxPoint"></div> <strong>Subject: </strong> -
-          <a href={`/inkle/mails/id={${mail.id}}`}>{mail.subject}</a>
-          <Link to={`/inkle/mails/id={${mail.id}}`}>
-            <button className="btn btn-primary">btn</button>
-          </Link>
+          <Link to={`/inkle/mails/id={${mail.id}}`}>{mail.subject}</Link>
         </li>
       ))}
     </ul>
