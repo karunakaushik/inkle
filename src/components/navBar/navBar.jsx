@@ -4,7 +4,7 @@ import "./navBar.css";
 const NavBar = () => {
   return (
     <nav>
-      <ul className="list gap">
+      <ul className=" d-flex list gap">
         <li>
           <Link to="/inkle">
             <button className="btn btn-primary">All</button>

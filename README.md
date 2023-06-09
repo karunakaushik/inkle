@@ -5,6 +5,6 @@
     Run command : npm install
     Run command : npm start
 
-http://localhost:3000/ : default All mail
+https://karunakaushik.github.io/inkle : default All mail
 
-http://localhost:3000/filter/inbox : inbox mail
+I have used GitHub to host the page.

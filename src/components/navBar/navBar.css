@@ -5,6 +5,15 @@
   align-items: center;
   gap: 10px;
 }
+.list {
+  flex-direction: column;
+}
 .btn {
   width: 80px;
+}
+@media only screen and (max-width: 600px) {
+  .list {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }

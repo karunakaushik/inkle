@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import MailList from "../mailList/mailList";
 import SearchResults from "../searchBox/searchBox";
-
+import "./mailInbox.css";
 const MailInbox = () => {
   //using Redux
   const [search, setSearch] = useState("");
@@ -23,7 +23,7 @@ const MailInbox = () => {
     setFiltered(update);
   };
   return (
-    <div>
+    <div className="mainBox">
       <SearchResults searchTerm={search} onSearchChange={handelSearch} />
       <h1> All Mails</h1>
       {!error ? <MailList mails={filtered} /> : <p>Error: {error}</p>}

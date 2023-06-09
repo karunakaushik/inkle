@@ -6,3 +6,9 @@
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 600px) {
+  .contain {
+    flex-direction: column;
+  }
+}
