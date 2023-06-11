@@ -23,7 +23,6 @@ function App() {
         <Switch>
           <Route path="/inkle/filter/:tag" component={FilteredMailList} />
           <Route path="/inkle/mails/id={:id}" component={MailBody} />
-          <Route path="/inkle/search/:keyword" component={SearchResults} />
           <Route exact path="/inkle" component={MailInbox} />
         </Switch>
       </div>
