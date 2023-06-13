@@ -1,9 +1,9 @@
 import React from "react";
-const SearchResults = (props) => {
+const SearchTerms = (props) => {
   const { searchTerm, onSearchChange } = props;
+
   return (
     <div>
-      <h1>Search Results for {searchTerm}</h1>
       <span>Search : </span>
       <input
         className="searchBox"
@@ -16,4 +16,4 @@ const SearchResults = (props) => {
   );
 };
 
-export default SearchResults;
+export default SearchTerms;

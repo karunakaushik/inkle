@@ -1,30 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import MailList from "../mailList/mailList";
-import SearchResults from "../searchBox/searchBox";
+import SearchTerms from "../searchBox/searchBox";
 import "./mailInbox.css";
+import {
+  useHistory,
+  useLocation,
+} from "react-router-dom/cjs/react-router-dom.min";
 const MailInbox = () => {
+  const history = useHistory();
+
   //using Redux
-  const [search, setSearch] = useState("");
+  const keyVar = history?.location?.search?.split("=")[1];
+
+  const [searchTerm, setSearchTerm] = useState(keyVar);
   const mails = useSelector((state) => state.mails);
   const [filtered, setFiltered] = useState(mails);
   const error = useSelector((state) => state.error);
 
   useEffect(() => {
-    setFiltered(mails);
+    const newList = mails.filter((mail) =>
+      mail.subject?.toLowerCase().includes(searchTerm?.toLowerCase())
+    );
+    setFiltered(newList);
   }, [mails]);
 
-  const handelSearch = (e) => {
-    setSearch(e.target.value);
-
+  const onSearchChange = (e) => {
+    setSearchTerm(e.target.value);
     const update = mails.filter((mail) =>
       mail.subject?.toLowerCase().includes(e.target.value?.toLowerCase())
     );
     setFiltered(update);
+    history.push(`/inkle?search=${e.target.value}`);
   };
+
   return (
     <div className="mainBox">
-      <SearchResults searchTerm={search} onSearchChange={handelSearch} />
+      <SearchTerms searchTerm={searchTerm} onSearchChange={onSearchChange} />
       <h1> All Mails</h1>
       {!error ? <MailList mails={filtered} /> : <p>Error: {error}</p>}
     </div>

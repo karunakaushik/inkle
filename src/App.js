@@ -2,13 +2,11 @@ import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MailInbox from "./components/mailInbox/mailInbox";
 import MailBody from "./components/mailBody/mailBody";
-import SearchResults from "./components/searchBox/searchBox";
 import FilteredMailList from "./components/filteredMail/filteredMail";
 import NavBar from "./components/navBar/navBar";
 import { useDispatch } from "react-redux";
 import { fetchMails } from "./Reduxstore/action/actions";
 import { useEffect } from "react";
-
 function App() {
   const dispatch = useDispatch();
 
