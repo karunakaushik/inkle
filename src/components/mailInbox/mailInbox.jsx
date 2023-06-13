@@ -9,19 +9,20 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 const MailInbox = () => {
   const history = useHistory();
-
   //using Redux
   const keyVar = history?.location?.search?.split("=")[1];
-
   const [searchTerm, setSearchTerm] = useState(keyVar);
   const mails = useSelector((state) => state.mails);
   const [filtered, setFiltered] = useState(mails);
   const error = useSelector((state) => state.error);
 
   useEffect(() => {
-    const newList = mails.filter((mail) =>
-      mail.subject?.toLowerCase().includes(searchTerm?.toLowerCase())
-    );
+    let newList = mails;
+    if (searchTerm !== undefined && searchTerm?.trim() !== "") {
+      newList = mails.filter((mail) =>
+        mail.subject?.toLowerCase().includes(searchTerm?.toLowerCase())
+      );
+    }
     setFiltered(newList);
   }, [mails]);
 
@@ -42,5 +43,4 @@ const MailInbox = () => {
     </div>
   );
 };
-
 export default MailInbox;
